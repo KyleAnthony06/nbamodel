@@ -13,7 +13,10 @@ def _escape(value: object) -> str:
 def _pick_text(row: Row) -> str:
     pick_type = row.get("pick_type", "").lower()
     if pick_type == "spread":
-        return f"{row.get('team', '')} {row.get('line', '')}"
+        line = row.get("line", "")
+        if line and not line.startswith("-"):
+            line = f"+{line}"
+        return f"{row.get('team', '')} {line}"
 
     player = row.get("player", "")
     market = row.get("market", "")
