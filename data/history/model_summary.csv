@@ -1,0 +1,14 @@
+segment_type,segment,sample_size,wins,losses,pushes,win_rate,avg_confidence,calibration_adjustment
+market,assists,1,1,0,0,1.000,66.48,0.00
+market,points,2,2,0,0,1.000,67.83,0.00
+market,rebounds,1,0,1,0,0.000,66.52,0.00
+market,spread,1,1,0,0,1.000,59.48,0.00
+market,threes,1,1,0,0,1.000,67.53,0.00
+market_side,assists:under,1,1,0,0,1.000,66.48,0.00
+market_side,points:over,1,1,0,0,1.000,71.31,0.00
+market_side,points:under,1,1,0,0,1.000,64.35,0.00
+market_side,rebounds:over,1,0,1,0,0.000,66.52,0.00
+market_side,spread:team,1,1,0,0,1.000,59.48,0.00
+market_side,threes:over,1,1,0,0,1.000,67.53,0.00
+type,prop,5,4,1,0,0.800,67.24,0.00
+type,spread,1,1,0,0,1.000,59.48,0.00
