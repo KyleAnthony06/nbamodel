@@ -194,5 +194,5 @@ adjustment, or feature weights.
 ## Tests
 
 ```bash
-PYTHONPATH=src python3 -m unittest
+PYTHONPATH=src python3 -m unittest discover -s tests
 ```

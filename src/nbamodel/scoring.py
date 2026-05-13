@@ -132,9 +132,9 @@ def score_prop(row: Row, weights: dict[str, float]) -> Row:
             "edge_pct": f"{edge_pct:.3f}",
             "feature_score": f"{feature_score:.3f}",
             "top_factors": _format_factors(features, weights),
-            "risk_flags": _risk_flags(output),
         }
     )
+    output["risk_flags"] = _risk_flags(output)
     return output
 
 
@@ -180,9 +180,9 @@ def score_spread(row: Row, weights: dict[str, float]) -> Row:
             "edge_pct": f"{edge / max(abs(line), 1.0):.3f}",
             "feature_score": f"{feature_score:.3f}",
             "top_factors": _format_factors(features, weights),
-            "risk_flags": _risk_flags(output),
         }
     )
+    output["risk_flags"] = _risk_flags(output)
     return output
 
 
