@@ -1,0 +1,41 @@
+{
+  "prop_weights": {
+    "projection_edge": 3.2,
+    "recent_form": 1.2,
+    "trend": 0.7,
+    "attempt_trend": 0.8,
+    "matchup": 1.4,
+    "defense_rating": 0.8,
+    "injury_usage": 1.1,
+    "minutes_security": 1.0,
+    "shot_quality": 0.9,
+    "volume_stability": 0.9,
+    "team_total": 0.5,
+    "pace": 0.4,
+    "rest": 0.3,
+    "price": 0.6,
+    "news_risk": 1.4
+  },
+  "spread_weights": {
+    "projection_edge": 3.4,
+    "power_rating": 1.5,
+    "injury_net_rating": 1.2,
+    "rest_advantage": 0.8,
+    "schedule_spot": 0.8,
+    "market_movement": 0.7,
+    "consensus_edge": 0.6,
+    "pace_edge": 0.4,
+    "rebounding_edge": 0.5,
+    "turnover_edge": 0.5,
+    "clutch_edge": 0.3,
+    "motivation": 0.5,
+    "price": 0.4,
+    "news_risk": 1.0
+  },
+  "learning": {
+    "history_path": "data/history/pick_history.csv",
+    "summary_path": "data/history/model_summary.csv",
+    "min_sample": 20,
+    "max_adjustment": 5.0
+  }
+}

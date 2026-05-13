@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nbamodel"
+version = "0.1.0"
+description = "CSV-driven NBA player prop and spread ranking model"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "nbamodel" }]
+dependencies = []
+
+[project.scripts]
+nbamodel = "nbamodel.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

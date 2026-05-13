@@ -1,0 +1,4 @@
+date,game_id,team,opponent,line,american_odds,book,projected_margin,team_power_rating,opponent_power_rating,injury_net_rating,schedule_spot,rest_advantage,travel_spot,market_consensus,opening_line,current_line,pace_edge,rebounding_edge,turnover_edge,clutch_edge,motivation,news_risk,notes
+2026-01-01,EX1,AAA,BBB,-3.5,-110,ExampleBook,6.4,4.8,1.2,1.6,0.7,1,home stand,-3.0,-2.5,-3.5,0.8,2.1,1.0,0.4,1.0,0.10,Home team has healthier rotation
+2026-01-01,EX2,CCC,DDD,4.5,-108,ExampleBook,-1.0,0.4,1.0,0.2,0.5,0,short road trip,4.0,5.5,4.5,-0.3,-1.0,0.6,-0.2,0.4,0.12,Underdog power rating close enough
+2026-01-01,EX3,EEE,FFF,-1.5,-115,ExampleBook,0.2,1.4,1.1,-0.5,-0.6,-1,back-to-back,-1.0,-2.5,-1.5,0.2,0.3,-0.8,0.2,0.1,0.50,Late starter status creates volatility
