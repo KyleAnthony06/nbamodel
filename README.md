@@ -20,6 +20,7 @@ data/input/             Daily prop and spread candidate CSVs
 data/output/            Generated picks CSVs
 data/results/           Actual player/game result CSVs and graded outputs
 data/history/           Long-term pick history and model summary
+reports/                Easy-to-read Markdown reports
 src/nbamodel/           Python package and CLI
 tests/                  Smoke tests
 ```
@@ -46,6 +47,7 @@ python3 -m pip install -e .
    Output:
 
    - `data/output/picks_YYYY-MM-DD.csv`
+   - `reports/picks_report_YYYY-MM-DD.md`
 
 3. The next day, fill in actual results:
 
@@ -63,6 +65,13 @@ python3 -m pip install -e .
    - `data/results/graded_picks_YYYY-MM-DD.csv`
    - `data/history/pick_history.csv`
    - `data/history/model_summary.csv`
+   - `reports/picks_report_YYYY-MM-DD.md`
+
+5. If you only want to rebuild the readable file from existing CSVs:
+
+   ```bash
+   python3 -m nbamodel report --date YYYY-MM-DD
+   ```
 
 ## Example
 
@@ -72,6 +81,9 @@ The repo includes example files for `2026-01-01`.
 python3 -m nbamodel generate --date 2026-01-01
 python3 -m nbamodel grade --date 2026-01-01
 ```
+
+Open `reports/picks_report_2026-01-01.md` to see the picks in a clean table
+with confidence, edge, top factors, risk flags, and grading results.
 
 ## How scoring works
 

@@ -3,6 +3,7 @@ from pathlib import Path
 
 from nbamodel.config import load_config
 from nbamodel.grading import grade_picks
+from nbamodel.report import write_report
 from nbamodel.scoring import rank_picks
 
 
@@ -58,6 +59,28 @@ class ScoringWorkflowTest(unittest.TestCase):
         self.assertTrue(summary_path.exists())
         self.assertEqual(len(graded), 6)
         self.assertLessEqual({row["result"] for row in graded}, {"win", "loss", "push"})
+
+    def test_write_report_creates_readable_markdown(self) -> None:
+        config = load_config(Path("config/weights.json"))
+        picks_path, _ = rank_picks(
+            date="2026-01-01",
+            props_path=Path("data/input/props_2026-01-01.csv"),
+            spreads_path=Path("data/input/spreads_2026-01-01.csv"),
+            output_dir=self.tmp_path,
+            config=config,
+        )
+
+        report_path, rows = write_report(
+            date="2026-01-01",
+            picks_path=picks_path,
+            output_dir=self.tmp_path,
+        )
+
+        report = report_path.read_text(encoding="utf-8")
+        self.assertEqual(len(rows), 6)
+        self.assertIn("# NBA Picks Report - 2026-01-01", report)
+        self.assertIn("## Top 5 player props", report)
+        self.assertIn("## Number 1 spread pick", report)
 
 
 if __name__ == "__main__":
