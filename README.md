@@ -29,7 +29,7 @@ tests/                  Smoke tests
 Install the local package once:
 
 ```bash
-python -m pip install -e .
+python3 -m pip install -e .
 ```
 
 1. Create or copy the slate files:
@@ -40,7 +40,7 @@ python -m pip install -e .
 2. Generate picks:
 
    ```bash
-   python -m nbamodel generate --date YYYY-MM-DD
+   python3 -m nbamodel generate --date YYYY-MM-DD
    ```
 
    Output:
@@ -55,7 +55,7 @@ python -m pip install -e .
 4. Grade the slate:
 
    ```bash
-   python -m nbamodel grade --date YYYY-MM-DD
+   python3 -m nbamodel grade --date YYYY-MM-DD
    ```
 
    Outputs:
@@ -69,8 +69,8 @@ python -m pip install -e .
 The repo includes example files for `2026-01-01`.
 
 ```bash
-python -m nbamodel generate --date 2026-01-01
-python -m nbamodel grade --date 2026-01-01
+python3 -m nbamodel generate --date 2026-01-01
+python3 -m nbamodel grade --date 2026-01-01
 ```
 
 ## How scoring works
@@ -194,5 +194,5 @@ adjustment, or feature weights.
 ## Tests
 
 ```bash
-python -m pytest
+PYTHONPATH=src python3 -m unittest
 ```

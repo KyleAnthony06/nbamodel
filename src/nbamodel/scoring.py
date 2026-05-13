@@ -96,7 +96,7 @@ def score_prop(row: Row, weights: dict[str, float]) -> Row:
     ) * direction / max(abs(line), 1.0)
     attempt_trend = (
         as_float(row.get("last_5_attempts")) - as_float(row.get("season_attempts"))
-    ) * direction / max(abs(as_float(row.get("season_attempts")), 1.0), 1.0)
+    ) * direction / max(abs(as_float(row.get("season_attempts"))), 1.0)
     opponent_rank = as_float(row.get("opp_rank_vs_market"), 15.5)
     matchup = ((opponent_rank - 15.5) / 14.5) * direction
     defense_rating_edge = normalize((as_float(row.get("opp_def_rating"), 115.0) - 115.0) * direction, 8.0)
